@@ -1,0 +1,27 @@
+{% extends 'ejercicio1/base.html'%}
+
+{% block content %}
+<table class="table container-sm mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for user in user_list %}
+      <tr>
+        <td {% if user.es_letra_a %} style="font-weight: bold;" {% endif %}> {{user.username}} </td>
+        <td> {{user.edad}} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                2022 &copy juanORG
+            </td>
+        </tr>
+    </tfoot>
+  </table>
+{% endblock %}

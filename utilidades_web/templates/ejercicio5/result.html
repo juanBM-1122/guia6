@@ -1,0 +1,28 @@
+{% extends 'ejercicio1/base.html'%}
+
+{% block content %}
+    <div class="container-sm mt-4">
+            <table class="table">
+                <tbody>
+                        <tr>
+                            <td>Physics</td>
+                            <td>{{args.physics}}</td>
+                
+                        </tr>
+                        <tr>
+                            <td>Chemistry</td>
+                            <td>{{args.chemistry}}</td>
+                        </tr>
+                        <tr>
+                            <td>Maths</td>
+                            <td>{{args.maths}}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{args.name}}</td>
+                        </tr>
+                </tbody>
+            </table>
+    </div>
+
+{% endblock %}

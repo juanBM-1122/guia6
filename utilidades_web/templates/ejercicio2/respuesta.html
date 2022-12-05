@@ -1,0 +1,17 @@
+{% extends 'ejercicio1/base.html'%}
+
+{% block content %}
+
+{% if resultados.error %}
+<div class="alert alert-danger" role="alert">
+    No se puede realizar una division entre cero
+  </div>
+{% else %}
+<div class="alert alert-success" role="alert">
+    <H2>
+        LA RESPUESTA ES : {{resultados.resultado}}
+    </H2>
+  </div>
+{% endif %}
+
+{% endblock %}

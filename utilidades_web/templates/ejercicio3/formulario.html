@@ -1,0 +1,12 @@
+{% extends 'ejercicio1/base.html'%}
+
+{% block content %}
+<form class="container-sm" method="GET" action="{{url_for('resultados_noticias')}}">
+    <div class="mb-3">
+      <label for="inputPalabraClave" class="form-label">Ingrese el palabra clave</label>
+      <input type="text" class="form-control" id="inputPalabraClave" name="inputPalabraClave" aria-describedby="inputPalabraClave">
+      <div id="emailHelp" class="form-text">Ingrese la palabra clave</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+{% endblock %}

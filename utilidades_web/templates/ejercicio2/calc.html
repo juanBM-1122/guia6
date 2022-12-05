@@ -1,0 +1,21 @@
+{% extends 'ejercicio1/base.html'%}
+
+{% block content %}
+<div class="container-sm mt-4">
+    <form action="{{ url_for('realizar_calculo') }}" method="get" name="form" id="form">
+        <input class="form-control" type="number" placeholder="num1" aria-label="default input example" name="num1" id="num1">
+        <br>
+        <input class="form-control" type="number" placeholder="num2" aria-label="default input example" name="num2" id="num2">
+        <br>
+        <select class="form-select" aria-label="Default select example" name="opcion" id="opcion">
+            <option  selected value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicacion">Mutiplicación</option>
+            <option value="division">División</option>
+          </select>
+          <br>
+          <button type="submit" class="btn btn-primary">Calcular</button>
+    </form>
+</div>
+   
+{% endblock %}

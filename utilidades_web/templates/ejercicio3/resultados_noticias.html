@@ -1,0 +1,26 @@
+{% extends 'ejercicio1/base.html'%}
+
+{% block content %}
+
+    {% if contexto.error%}
+<div class="alert alert-danger" role="alert">
+     {{contexto.error}}
+     <div>En su lugar se muetra toda la lista</div>
+  </div>
+  <ul class="list-group container-sm list-group-flush list-group-numbered">
+    {% for titulo in contexto.lista %}
+    <li class="list-group-item"><a href="#" class="badge badge-primary" style="color:black; text-decoration: none;"> {{ titulo }} </a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="alert alert-primary" role="alert">
+    {{contexto.mensaje}}
+  </div>
+  <ul class="list-group container-sm list-group-flush list-group-numbered">
+    {% for titulo in contexto.lista %}
+    <li class="list-group-item"><a href="#" class="badge badge-primary" style="color:black; text-decoration: none;">{{ titulo }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <a href="{{ url_for('formulario_busqueda_noticias') }}" class="btn btn-secondary mt-3"> Regresar a formulario </a>
+{% endblock %}

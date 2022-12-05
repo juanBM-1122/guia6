@@ -1,0 +1,19 @@
+{% extends "ejercicio1/base.html" %}
+
+
+{% block content %}
+        <div class="container-md">
+            <table class="table">
+               <thead>
+                <th scope="col">Nombre</th>
+                <th scope="col">Edad</th>
+               </thead>
+               <tbody>
+                <tr>
+                    <th>{{ usuario.nombre }}</th>
+                    <td>{{ usuario.edad }}</td>
+                </tr>
+               </tbody>
+            </table>
+        </div>
+{% endblock %}
